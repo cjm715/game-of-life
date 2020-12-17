@@ -82,22 +82,3 @@ def flip_n_bits(grid,n,batch_size):
 
 def plotg(grid):
     plt.imshow(grid, cmap='Greys',  interpolation='nearest')
-
-    
-def calc_grad_C(grid0_p, s_layer_p, grid_p, grid):
-    delta_grid_p_if_one_more_neighbor = G(s_layer_p + 1, grid0_p) - grid_p
-    delta_grid_p_if_one_less_neighbor = G(s_layer_p - 1, grid0_p) - grid_p
-    delta_grid_p_if_center_cell_flips = G(s_layer_p, 1 - grid0_p) - grid_p
-    error_grid = grid_p - grid
-
-    grad_C_one_more_neighbor = sum_neighbors(delta_grid_p_if_one_more_neighbor**2 + 
-                                             2*error_grid*delta_grid_p_if_one_more_neighbor)
-    grad_C_one_less_neighbor = sum_neighbors(delta_grid_p_if_one_less_neighbor**2 + 
-                                             2*error_grid*delta_grid_p_if_one_less_neighbor)
-    grad_C_neighbor_contribution = torch.where(grid0_p == 0, 
-                                               grad_C_one_more_neighbor,
-                                               grad_C_one_less_neighbor)
-    grad_C_self_contribution = delta_grid_p_if_center_cell_flips**2 + 2*error_grid*delta_grid_p_if_center_cell_flips
-
-    grad_C = grad_C_neighbor_contribution + grad_C_self_contribution
-    return grad_C
