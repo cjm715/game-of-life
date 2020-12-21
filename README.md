@@ -19,7 +19,7 @@ Given only the final state of the game of life and the number of time steps betw
 
 The solution provided in this repository uses simulated annealing to solve this challenge. The initial state is solved for by evaluating the mean absolute error on the evolved final state. This error is the cost. For each iteration, a cell is flipped from alive to dead or from dead to alive in the initial state and then the cost is evaluated. If the cost deceased, it will update the initial state guess to this new flipped version. Otherwise, the grid will pick this new version with a certain probability dependent on the change in cost and a temperature variable. Over many iterations, the initial state will tend towards a state that results in a small cost (= mean absolute error).  
 
-# Getting Started
+# Getting started with code
 
 ## Clone repo
 - Clone repo with the following command: `git clone https://github.com/cjm715/game-of-life.git`
