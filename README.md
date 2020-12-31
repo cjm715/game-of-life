@@ -1,7 +1,7 @@
 # Introduction
 This repo has my solution to the [Kaggle Competition: Conway's Reverse Game of Life - 2020](https://www.kaggle.com/c/conways-reverse-game-of-life-2020) which resulted in 6th place on the public and private leaderboard.
 
-This README.md provides a brief overview of the solution and code.There will be a more thorough explanation in an upcoming blog on my [website](https://cjm715.github.io/) soon.
+This README.md provides a brief overview of the solution and code.There will be a more thorough explanation in an upcoming  [blog](https://cjm715.github.io/data/2020/12/22/kaggle-reverse-game-of-life.html).
 
 # What is Conway's game of life?
 It is a cellular automaton created by the mathematician John Conway. It consists of a grid where each cell can have either one of two states: dead and alive. The grid is updated each time step by these set of rules:
