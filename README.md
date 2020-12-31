@@ -1,4 +1,6 @@
 
+# Blog
+
 This README.md provides a brief overview of my solution. See [blog](https://cjm715.github.io/data/2020/12/22/kaggle-reverse-game-of-life.html) for a more thorough explanation.
 
 # Introduction
